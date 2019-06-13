@@ -61,6 +61,11 @@ void Field::updateField() {
 
 void Field::spawn() {
 	// Spawn a weighted random item on the ground.
+
+	int type = rand() % 3 +1;
+	int x = rand() % N;
+	int y = rand() % N;
+	Node* item = new node (x ,y , type);
 }
 
 void Field::consume(Node* item) {
@@ -80,6 +85,9 @@ void Field::consume(Node* item) {
 
 		case 3:
 			this->modulo = true;
+
+		default:  //todo: this probably unsafe, modify later
+			delete item;
 
 	}
 }
