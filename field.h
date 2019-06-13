@@ -13,14 +13,21 @@ class Field {
 private:
 	Snake snake;
 	int x, y;
-	int direction; // 4 directions, haven't decided which is which
+	int direction;
+	int d[4][2] = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}}; // [up, down, left, right]
 	bool collision;
+	bool modulo;
 
 	int field[N][N];
 
 public:
 	Field();
 	~Field();
+
+	void setDirection(int d); // Call on key press
+
+	void updateSnake(); // For when snake moves
+	void updateField(); // For updating field after snake moves
 
 	void spawn();
 	void consume(Node* item);

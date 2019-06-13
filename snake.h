@@ -12,13 +12,16 @@ private:
 	int type;
 	int x, y;
 
+public:
 	Node* next;
 
-public:
 	Node();
 	Node(int x, int y, int type);
 	~Node();
 
+	int getX();
+	int getY();
+	int getType();
 	void setLocation(int new_x, int new_y);
 
 };
@@ -35,6 +38,7 @@ public:
 	~Snake();
 
 	int getLength();
+	Node* getHead();
 	void incrementLength();
 
 	void prepend(Node* aNode);
