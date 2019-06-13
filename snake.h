@@ -4,7 +4,7 @@
 #include <cstdlib>
 
 #define N 500
-// #define Ntypes 5 0 = empty, 1 = snake/fruit, 2 = powerup, etc...
+// #define Ntypes 5 0 = empty, 1 = snake/fruit, 2 = no collision, etc...
 
 class Node {
 
@@ -38,7 +38,6 @@ public:
 	void incrementLength();
 
 	void prepend(Node* aNode);
-	void consume(Node* aNode);
 
 };
 

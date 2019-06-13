@@ -34,5 +34,7 @@ void Field::consume(Node* item) {
 		case 1:
 			snake.prepend(item);
 			snake.incrementLength();
+		case 2:
+			this.collision = false;
 	}
 }

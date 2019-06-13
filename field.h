@@ -6,7 +6,7 @@
 #include <ctime>
 
 #define N 500
-// #define Ntypes 5 0 = empty, 1 = snake/fruit, 2 = powerup, etc...
+// #define Ntypes 5 0 = empty, 1 = snake/fruit, 2 = no collision, etc...
 
 class Field {
 

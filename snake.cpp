@@ -63,17 +63,3 @@ void Snake::prepend(Node* aNode) {
 	this.head = aNode;
 	aNode->next = temp;
 }
-
-void Snake::consume(Node* aNode) {
-	if (aNode == nullptr)
-		throw "consume() cannot take nullptr aNode.";
-
-	int type = aNode->type;
-	switch (type) {
-
-		case 0:
-			prepend(aNode);
-			incrementLength();
-			break;
-	}
-}
